@@ -1,0 +1,125 @@
+/* 1. Animate rotation (eyes) */
+.robot-eye-left {
+  animation: eye-left 2s infinite alternate;
+}
+
+@keyframes eye-left {
+  from {
+    transform: rotate(-13deg);
+  }
+  to {
+    transform: rotate(20deg);
+  }
+}
+
+.robot-eye-right,
+.antene-one {
+animation: eye-right 2s infinite alternate;
+}
+
+@keyframes eye-right {
+  from {
+    transform: rotate(13deg);
+  }
+  to {
+    transform: rotate(-20deg);
+  }
+}
+
+/* 2. Animate disappearing/appearing (hair/antene) */
+.robot-hair,
+.facial-hair {
+  animation: hair-style 2s infinite alternate;
+}
+
+@keyframes hair-style {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* 3. Animate changing dimensions (ears) */
+.robot-ear-left,
+.robot-ear-right,
+.antene-two {
+animation: ears 1s infinite alternate;
+}
+
+@keyframes ears {
+  from {
+    transform: scale(.75);
+  }
+  to {
+    transform: scale(1.25);
+  }
+}
+
+/* 4. Animate movement around some position (nose) */
+.robot-nose {
+  animation: nose 2s infinite ;
+}
+
+@keyframes nose {
+  0% {
+    top: 20px;
+    left: 0px;
+  }
+  20% {
+    top: 20px;
+    left: 10px;
+  }
+  40% {
+    top: 22px;
+    left: 10px;
+  }
+  60% {
+    top: 22px;
+    left: -10px;
+  }
+  80% {
+    top: 20px;
+    left: -10px;
+  }
+  100% {
+    top: 20px;
+    left: 0px;
+  }
+}
+
+/* 5. Animation of object hover event (mouth-sideToSide) */
+.robot-mouth {
+z-index: 3;
+}
+
+.robot-mouth:hover {
+  animation: mouth 1s infinite alternate;
+}
+ 
+
+@keyframes mouth {
+  from {
+    right: 5px;
+  }
+  to {
+     right: -5px;
+  }
+}
+
+/* 6. Animate color changing (tooth-yellow/white) */
+.robot-tooth {
+  animation: tooth 3s infinite alternate;
+}
+
+@keyframes tooth {
+  from {
+    border-top: 70px solid #fff;
+  }
+  to {
+    border-top: 50px solid #afb665;
+  }
+}
+
+/* [Every facial feature item except for the face shape is animated] */
